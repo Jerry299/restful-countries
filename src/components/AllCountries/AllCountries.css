@@ -1,0 +1,28 @@
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+  .countries--container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .countries--wrapper {
+    width: 100%;
+    background-color: #f6f5f5;
+    z-index: -1;
+  }
+  .search--and--filter {
+    display: flex;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+  .search {
+    flex: 50%;
+  }
+  .filter {
+    flex: 0.65;
+  }
+}

@@ -1,0 +1,44 @@
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+  .header__container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .header__container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+  .header__container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+  }
+  .header__wrapper {
+    background-color: #fff;
+    box-shadow: 2px 0 5px #1e212d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .header--text {
+    font-size: 1.55rem;
+    font-family: "Cabin", sans-serif;
+    font-weight: 500;
+    width: 50%;
+  }
+  .header__mode--toggler {
+    width: 15%;
+  }
+
+  .header--moon-icon--text {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

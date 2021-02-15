@@ -1,0 +1,27 @@
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+  .search--container {
+  }
+  .search--wrapper {
+    display: flex;
+    position: relative;
+  }
+  .search--icon {
+    position: absolute;
+    padding: 6px;
+    left: 15px;
+  }
+  .search--input {
+    width: 30%;
+    padding: 10px;
+    height: 38px;
+    border-radius: 5px 5px;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: #fff;
+  }
+}
