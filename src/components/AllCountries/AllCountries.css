@@ -4,7 +4,7 @@
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
   .countries--container {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -19,10 +19,11 @@
     margin-top: 2rem;
   }
   .search {
-    flex: 50%;
+    flex: 49.56%;
+    padding-left: 2.69rem;
   }
   .filter {
-    flex: 0.95;
+    flex: 0.55;
   }
   .all--countries {
     /* height: 66.26vh; */
