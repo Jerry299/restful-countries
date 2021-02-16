@@ -6,3 +6,7 @@
 
 font-family: 'Cabin', sans-serif;
 */
+
+.app {
+  overflow-y: none;
+}

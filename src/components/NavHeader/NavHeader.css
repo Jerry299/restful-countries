@@ -16,7 +16,7 @@
   .header__container {
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin-bottom: 2px;
     font-family: "Cabin", sans-serif;
   }
   .header__wrapper {

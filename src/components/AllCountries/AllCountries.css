@@ -11,7 +11,6 @@
   .countries--wrapper {
     width: 100%;
     background-color: #f6f5f5;
-    z-index: -1;
   }
   .search--and--filter {
     display: flex;
@@ -23,6 +22,9 @@
     flex: 50%;
   }
   .filter {
-    flex: 0.65;
+    flex: 0.95;
+  }
+  .all--countries {
+    /* height: 66.26vh; */
   }
 }

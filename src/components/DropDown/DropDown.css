@@ -1,4 +1,4 @@
-select {
+/* select {
   appearance: none;
   background-color: transparent;
   border: none;
@@ -14,14 +14,15 @@ select {
 
 .select {
   width: 10%;
-  min-width: 15ch;
-  max-width: 30ch;
-  border: 1px solid blue;
+  min-width: 11ch;
+  max-width: 20ch;
+  border: 1px solid #1e212d;
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1.2rem;
   cursor: pointer;
-  line-height: 1.1;
+
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
   display: grid;
@@ -33,7 +34,7 @@ select {
   content: "";
   width: 0.8em;
   height: 0.5em;
-  background-color: red;
+  background-color: #1e212d;
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   justify-self: end;
 }
@@ -48,6 +49,18 @@ select:focus + .focus {
   left: -1px;
   right: -1px;
   bottom: -1px;
-  border: 2px solid green;
+  border: 0.4px solid;
   border-radius: 5px;
+} */
+
+select {
+  padding: 0.3rem;
+  border: 0.4px solid #1e212d;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  width: 70%;
 }

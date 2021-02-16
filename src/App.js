@@ -1,15 +1,19 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavHeader from "./components/NavHeader/NavHeader";
 import AllCountries from "./components/AllCountries/AllCountries";
 
 function App() {
   return (
-    <Router>
+    <div className="app">
       <NavHeader />
+
       <AllCountries />
-      <Switch></Switch>
-    </Router>
+    </div>
+    // <Router>
+
+    //   <Switch></Switch>
+    // </Router>
   );
 }
 

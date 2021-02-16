@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./SearchBox.css";
 
-const SearchBox = () => {
+const SearchBox = ({ changeHandler, searchText }) => {
   return (
     <>
       <div className="search--container">
@@ -15,6 +15,7 @@ const SearchBox = () => {
             type="text"
             placeholder="Search for a country.."
             className="search--input"
+            onChange={changeHandler}
           />
         </div>
       </div>
