@@ -10,9 +10,9 @@ const DropDown = ({ changeHandler, selectValue }) => {
           onChange={changeHandler}
           value={selectValue}
         >
-          <option value=""> Filter By Region </option>
+          <option value="All"> Filter By Region </option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">Americas</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>

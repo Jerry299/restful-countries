@@ -13,6 +13,7 @@ const Countries = ({ countries }) => {
               population={country.population}
               region={country.region}
               capital={country.capital}
+              flag={country.flag}
             />
           );
         })}

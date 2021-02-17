@@ -6,7 +6,7 @@ import "./AllCountries.css";
 
 const AllCountries = () => {
   const [searchText, setSearchText] = useState("");
-  const [selectValue, setSelectValue] = useState("None");
+  const [selectValue, setSelectValue] = useState("All");
   const [countries, setCountries] = useState([]);
 
   const handleSearchChange = (e) => {
@@ -33,11 +33,16 @@ const AllCountries = () => {
     }
   };
 
-  console.log(selectValue);
-
+  const filteredByContinent =
+    selectValue === "All" || !selectValue
+      ? countries
+      : countries.filter((country) => {
+          return country.region === selectValue;
+        });
+  console.log(filteredByContinent);
   useEffect(() => {
     fetchCountriesData();
-  }, [searchText]);
+  }, [searchText, selectValue]);
 
   return (
     <main className="countries--container">
@@ -59,7 +64,7 @@ const AllCountries = () => {
           </div>
         </div>
         <div className="all--countries">
-          <Countries countries={countries} />
+          <Countries countries={filteredByContinent} />
         </div>
       </div>
     </main>
