@@ -7,15 +7,19 @@
   .countries-container {
     display: flex;
     margin-top: 2rem;
+    margin-bottom: 150px;
     justify-content: center;
     font-family: "Cabin", sans-serif;
   }
   .countries-wrapper {
-    width: 90%;
+    width: 91%;
     /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  a {
+    color: black;
+    text-decoration: none;
   }
 
   /* styles for country component */
@@ -36,7 +40,7 @@
     width: 100%;
     max-width: 100%;
     height: 200px;
-    max-height: auto;
+    border-radius: 5px 5px 0 0;
   }
   .country--body {
     padding: 2rem 1.4rem 1.2rem;

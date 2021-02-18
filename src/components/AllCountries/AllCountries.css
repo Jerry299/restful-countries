@@ -28,4 +28,10 @@
   .all--countries {
     /* height: 66.26vh; */
   }
+  .loading__spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
 }

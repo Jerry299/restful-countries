@@ -2,47 +2,23 @@ import React, { useState, useEffect } from "react";
 import DropDown from "../DropDown/DropDown";
 import SearchBox from "../SearchBox/SearchBox";
 import Countries from "../Countries/Countries";
+import Loader from "../Loader/Loader";
 import "./AllCountries.css";
 
-const AllCountries = () => {
-  const [searchText, setSearchText] = useState("");
-  const [selectValue, setSelectValue] = useState("All");
-  const [countries, setCountries] = useState([]);
-
-  const handleSearchChange = (e) => {
-    setSearchText(e.target.value);
-  };
-
-  const handleSelectChange = (e) => {
-    setSelectValue(e.target.value);
-  };
-
-  const fetchCountriesData = () => {
-    let url = `https://restcountries.eu/rest/v2/all`;
-
-    if (!searchText || searchText === "") {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => setCountries(data))
-        .catch((err) => console.log(err));
-    } else {
-      fetch(`https://restcountries.eu/rest/v2/name/${searchText}`)
-        .then((res) => res.json())
-        .then((data) => setCountries(data))
-        .catch((err) => console.log(err));
-    }
-  };
-
+const AllCountries = ({
+  countries,
+  selectValue,
+  searchText,
+  handleSearchChange,
+  handleSelectChange,
+}) => {
   const filteredByContinent =
     selectValue === "All" || !selectValue
       ? countries
       : countries.filter((country) => {
           return country.region === selectValue;
         });
-  console.log(filteredByContinent);
-  useEffect(() => {
-    fetchCountriesData();
-  }, [searchText, selectValue]);
+  // console.log(filteredByContinent);
 
   return (
     <main className="countries--container">
@@ -64,7 +40,13 @@ const AllCountries = () => {
           </div>
         </div>
         <div className="all--countries">
-          <Countries countries={filteredByContinent} />
+          {countries.length === 0 ? (
+            <div className="loading__spinner">
+              <Loader />
+            </div>
+          ) : (
+            <Countries countries={filteredByContinent} />
+          )}
         </div>
       </div>
     </main>
