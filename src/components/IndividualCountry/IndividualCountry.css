@@ -1,0 +1,61 @@
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+  .details--container {
+    width: 100%;
+    background-color: #f6f6f6;
+    font-family: "Cabin", sans-serif;
+  }
+  .details--wrapper {
+    display: flex;
+    height: 100%;
+  }
+  .back__button {
+    padding: 3.5rem 0px 0px 4rem;
+    margin-left: 1.2rem;
+    width: 170px;
+  }
+  .btn {
+    background-color: #fff;
+    width: 130px;
+    text-align: center;
+    height: 40px;
+    padding: 7px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .details--body {
+    display: flex;
+  }
+  .details--flag {
+    margin-left: 1.2rem;
+    padding: 4rem;
+  }
+  .details--flag--img {
+    width: 650px;
+    height: 400px;
+  }
+  .details--info {
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    flex-direction: column;
+
+    width: 40vw;
+    margin-top: 9rem;
+    height: 200px;
+  }
+  .details--info--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .details--info--child--one {
+    margin: 1.7rem;
+  }
+  .item--name {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}

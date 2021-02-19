@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavHeader from "./components/NavHeader/NavHeader";
 import AllCountries from "./components/AllCountries/AllCountries";
+import IndividualCountry from "./components/IndividualCountry/IndividualCountry";
 
 function App() {
   // app state
@@ -60,6 +61,9 @@ function App() {
             handleSearchChange={handleSearchChange}
             handleSelectChange={handleSelectChange}
           />
+        </Route>
+        <Route exact path="/countries/:name">
+          <IndividualCountry />
         </Route>
       </Switch>
     </Router>

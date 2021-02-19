@@ -1,11 +1,5 @@
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Link,
-//   Switch,
-//   useRouteMatch,
-// } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Countries.css";
 
 const Country = ({ name, population, region, capital, flag }) => {
@@ -18,7 +12,10 @@ const Country = ({ name, population, region, capital, flag }) => {
           <img src={flag} alt="" className="img" />
         </div>
         <div className="country--body">
-          <div className="country--name">{name}</div>
+          <Link to={`/countries/${name}`}>
+            <div className="country--name">{name}</div>
+          </Link>
+
           <div className="country--population">
             <span className="country--desc"> Population: </span>
             <span className="country--span"> {formattedPopulation}.</span>
