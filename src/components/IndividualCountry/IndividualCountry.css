@@ -2,7 +2,7 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 3900px) {
   .details--container {
     width: 100%;
     background-color: #f6f6f6;
@@ -10,7 +10,6 @@
   }
   .details--wrapper {
     display: flex;
-    height: 100%;
   }
   .back__button {
     padding: 3.5rem 0px 0px 4rem;
@@ -34,17 +33,17 @@
   }
   .details--flag--img {
     width: 650px;
-    height: 400px;
+    height: 410px;
   }
   .details--info {
     display: flex;
     /* background-color: red; */
     justify-content: center;
     flex-direction: column;
-
+    padding: 1.9rem;
     width: 40vw;
-    margin-top: 9rem;
-    height: 200px;
+    margin-top: 0.4rem;
+    /* height: 200px; */
   }
   .details--info--wrapper {
     display: flex;
@@ -52,10 +51,26 @@
     align-items: center;
   }
   .details--info--child--one {
-    margin: 1.7rem;
+    /* margin: 1.7rem; */
+    /* background-color: red; */
+  }
+  .details--info--child--two {
+    /* background-color: blue; */
+    padding-bottom: 1.3rem;
   }
   .item--name {
     font-size: 2.5rem;
     font-weight: 700;
+  }
+  .country--borders--section {
+    padding: 1.2rem 0px;
+  }
+  .country--border {
+    margin: 0.3rem;
+    border: 2px solid rgba(81, 85, 104, 0.2);
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }

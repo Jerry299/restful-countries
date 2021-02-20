@@ -1,17 +1,35 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "./IndividualCountry.css";
 
 const IndividualCountryDetails = ({ country }) => {
+  let history = useHistory();
+
+  const goBack = () => {
+    history.push("/");
+  };
+
+  // assigning each country prop to a var list
   let item = country[0];
-  let { population, nativeName, region, subregion, capital } = item;
+  let {
+    population,
+    nativeName,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+  } = item;
   const number = Number(population);
   const formattedPopulation = new Intl.NumberFormat().format(number);
 
   return (
     <div className="details--container">
-      <div className="back__button">
+      <div className="back__button" onClick={goBack}>
         <div className="btn">
           <span>
             <FontAwesomeIcon
@@ -59,9 +77,35 @@ const IndividualCountryDetails = ({ country }) => {
                   </div>
                 </div>
               </div>
-              <div className="details--info--child--two">Child 2</div>
+              <div className="details--info--child--two">
+                <div className="details--info--child--two__name">
+                  <p>
+                    <span className="country--desc">Top Level Domain</span>:{" "}
+                    <span className="country--span">{topLevelDomain}</span>
+                  </p>
+                  <p>
+                    <span className="country--desc">Currencies</span>:{" "}
+                    <span className="country--span">{currencies[0].name}</span>
+                  </p>
+                  <p>
+                    <span className="country--desc">Languages</span>:{" "}
+                    <span className="country--span">{languages[0].name}</span>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="country--borders">Borders</div>
+            <div className="country--borders details--info--child--one">
+              <section className="country--borders--section">
+                <span className="country--desc">Border Countries</span>:{" "}
+                {borders.slice(3).map((border) => {
+                  return (
+                    <span key={border} className="country--border">
+                      {border}
+                    </span>
+                  );
+                })}
+              </section>
+            </div>
           </div>
         </div>
       </div>

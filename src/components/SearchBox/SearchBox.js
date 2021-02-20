@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./SearchBox.css";
 
-const SearchBox = ({ changeHandler, searchText }) => {
+const SearchBox = ({ changeHandler }) => {
   return (
     <>
       <div className="search--container">

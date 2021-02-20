@@ -20,29 +20,28 @@ function App() {
     setSelectValue(e.target.value);
   };
 
-  // fetch function
-  const fetchCountriesData = () => {
-    let url = `https://restcountries.eu/rest/v2/all`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setCountries(data))
-      .catch((err) => console.log(err));
-
-    // if (!searchText || searchText === "") {
-    //   fetch(url)
-    //     .then((res) => res.json())
-    //     .then((data) => setCountries(data))
-    //     .catch((err) => console.log(err));
-    // } else {
-    //   fetch(`https://restcountries.eu/rest/v2/name/${searchText}`)
-    //     .then((res) => res.json())
-    //     .then((data) => setCountries(data))
-    //     .catch((err) => console.log(err));
-    // }
-  };
-
   // effects
   useEffect(() => {
+    // fetch function
+    const fetchCountriesData = () => {
+      let url = `https://restcountries.eu/rest/v2/all`;
+      // fetch(url)
+      //   .then((res) => res.json())
+      //   .then((data) => setCountries(data))
+      //   .catch((err) => console.log(err));
+
+      if (!searchText || searchText === "") {
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => setCountries(data))
+          .catch((err) => console.log(err));
+      } else {
+        fetch(`https://restcountries.eu/rest/v2/name/${searchText}`)
+          .then((res) => res.json())
+          .then((data) => setCountries(data))
+          .catch((err) => console.log(err));
+      }
+    };
     fetchCountriesData();
   }, [searchText, selectValue]);
 
@@ -71,22 +70,3 @@ function App() {
 }
 
 export default App;
-
-// const BlogPosts = {
-//   1: {
-//     title: "First Blog Post",
-//     description: "Lorem ipsum dolor sit amet, consectetur adip.",
-//   },
-//   2: {
-//     title: "Second Blog Post",
-//     description: "Hello React Router v6",
-//   },
-// };
-// <ul>
-//       {Object.entries(BlogPosts).map(([slug, { title }]) => (
-//         <li key={slug}>
-//           <h3>{title}</h3>
-//           {console.log(slug)}
-//         </li>
-//       ))}
-//     </ul>

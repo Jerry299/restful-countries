@@ -1,8 +1,36 @@
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+  .countries--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .countries--wrapper {
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  .search--and--filter {
+    display: flex;
+    flex-direction: column;
+  }
+  .search {
+    width: 100%;
+  }
+  .filter {
+    width: 100%;
+    display: flex;
+    padding: 1.5rem 2rem;
+  }
+
+  .loading__spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1900px) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 3900px) {
   .countries--container {
     width: 100%;
     display: flex;
@@ -25,9 +53,7 @@
   .filter {
     flex: 0.55;
   }
-  .all--countries {
-    /* height: 66.26vh; */
-  }
+
   .loading__spinner {
     display: flex;
     justify-content: center;
