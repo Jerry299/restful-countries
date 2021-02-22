@@ -10,10 +10,12 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [selectValue, setSelectValue] = useState("All");
   const [countries, setCountries] = useState([]);
+  const [theme, setTheme] = useState(false);
+  const color = theme ? "Light" : "Dark";
 
   // event handlers
   const handleSearchChange = (e) => {
-    setSearchText(e.target.value);
+    setSearchText(e.target.value.trim().toLowerCase());
   };
 
   const handleSelectChange = (e) => {
@@ -25,36 +27,29 @@ function App() {
     // fetch function
     const fetchCountriesData = () => {
       let url = `https://restcountries.eu/rest/v2/all`;
-      // fetch(url)
-      //   .then((res) => res.json())
-      //   .then((data) => setCountries(data))
-      //   .catch((err) => console.log(err));
-
-      if (!searchText || searchText === "") {
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => setCountries(data))
-          .catch((err) => console.log(err));
-      } else {
-        fetch(`https://restcountries.eu/rest/v2/name/${searchText}`)
-          .then((res) => res.json())
-          .then((data) => setCountries(data))
-          .catch((err) => console.log(err));
-      }
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => setCountries(data))
+        .catch((err) => console.log(err));
     };
     fetchCountriesData();
   }, [searchText, selectValue]);
 
+  const filterCountriesBySearch = countries.filter((country) => {
+    return country.name.toLowerCase().match(searchText);
+  });
+
   return (
     <Router>
       <div className="app">
-        <NavHeader />
+        <NavHeader theme={color} />
       </div>
 
       <Switch>
         <Route exact path="/">
           <AllCountries
-            countries={countries}
+            theme={color}
+            countries={filterCountriesBySearch}
             selectValue={selectValue}
             searchText={searchText}
             handleSearchChange={handleSearchChange}

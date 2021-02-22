@@ -4,14 +4,19 @@
     display: flex;
     justify-content: center;
   }
-  .countries--wrapper {
+  .countries--wrapper-Light {
     width: 100%;
     background-color: #f6f6f6;
+  }
+  .countries--wrapper-Dark {
+    width: 100%;
+    background-color: #1e212d;
   }
   .search--and--filter {
     display: flex;
     flex-direction: column;
   }
+
   .search {
     width: 100%;
   }
@@ -36,9 +41,13 @@
     display: flex;
     justify-content: center;
   }
-  .countries--wrapper {
+  .countries--wrapper-Light {
     width: 100%;
     background-color: #f6f6f6;
+  }
+  .countries--wrapper-Dark {
+    width: 100%;
+    background-color: #1e212d;
   }
   .search--and--filter {
     display: flex;

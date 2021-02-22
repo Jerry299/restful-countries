@@ -1,11 +1,12 @@
 import React from "react";
 import "./DropDown.css";
 
-const DropDown = ({ changeHandler, selectValue }) => {
+const DropDown = ({ changeHandler, selectValue, theme }) => {
   return (
     <div className="dropdown--container">
-      <div className="select">
+      <div>
         <select
+          className={`select-${theme}`}
           id="standard-select"
           onChange={changeHandler}
           value={selectValue}

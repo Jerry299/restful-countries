@@ -54,7 +54,7 @@ select:focus + .focus {
 } */
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
-  select {
+  .select-Light {
     padding: 0.8rem;
     border: 0.4px solid #1e212d;
     font-size: 1.2rem;
@@ -65,12 +65,37 @@ select:focus + .focus {
     overflow: hidden;
     width: 100%;
   }
+
+  .select-Dark {
+    padding: 0.8rem;
+    border: 0.4px solid #1e212d;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    background-color: #353536;
+    color: #fff;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 3900px) {
-  select {
-    padding: 0.3rem;
+  .select-Light {
+    border: 0.4px solid #1e212d;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    padding: 0.3rem 0.1rem;
+    width: 70%;
+  }
+  .select-Dark {
+    padding: 0.3rem 0.1rem;
     border: 0.4px solid #1e212d;
     font-size: 1.2rem;
     font-weight: 600;
@@ -79,5 +104,7 @@ select:focus + .focus {
     border: none;
     overflow: hidden;
     width: 70%;
+    background-color: #353536;
+    color: #fff;
   }
 }

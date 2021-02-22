@@ -11,6 +11,7 @@ const AllCountries = ({
   searchText,
   handleSearchChange,
   handleSelectChange,
+  theme,
 }) => {
   const filteredByContinent =
     selectValue === "All" || !selectValue
@@ -18,17 +19,17 @@ const AllCountries = ({
       : countries.filter((country) => {
           return country.region === selectValue;
         });
-  // console.log(filteredByContinent);
 
   return (
     <main className="countries--container">
-      <div className="countries--wrapper">
+      <div className={`countries--wrapper-${theme}`}>
         <div className="search--and--filter">
           <div className="search">
             <SearchBox
               // pass handleSearchText as prop to searchbox
               changeHandler={handleSearchChange}
               searchText={searchText}
+              theme={theme}
             />
           </div>
           <div className="filter">
@@ -36,6 +37,7 @@ const AllCountries = ({
               //pass handleSelectChange as a props
               changeHandler={handleSelectChange}
               selectValue={selectValue}
+              theme={theme}
             />
           </div>
         </div>
