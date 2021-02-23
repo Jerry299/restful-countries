@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "./IndividualCountry.css";
 
-const IndividualCountryDetails = ({ country }) => {
+const IndividualCountryDetails = ({ country, theme }) => {
   let history = useHistory();
 
   const goBack = () => {
@@ -28,9 +28,9 @@ const IndividualCountryDetails = ({ country }) => {
   const formattedPopulation = new Intl.NumberFormat().format(number);
 
   return (
-    <div className="details--container">
+    <div className={`details--container-${theme}`}>
       <div className="back__button" onClick={goBack}>
-        <div className="btn">
+        <div className={`btn-${theme}`}>
           <span>
             <FontAwesomeIcon
               icon={faArrowLeft}
@@ -96,10 +96,17 @@ const IndividualCountryDetails = ({ country }) => {
             </div>
             <div className="country--borders details--info--child--one">
               <section className="country--borders--section">
-                <span className="country--desc">Border Countries</span>:{" "}
+                <span className="country--desc" id="country--desc">
+                  Border Countries
+                </span>
+                :{" "}
                 {borders.slice(3).map((border) => {
                   return (
-                    <span key={border} className="country--border">
+                    <span
+                      key={border}
+                      className={`country--border-${theme}`}
+                      id="country--border"
+                    >
                       {border}
                     </span>
                   );

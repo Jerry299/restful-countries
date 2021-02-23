@@ -5,7 +5,7 @@ import Loader from "../Loader/Loader";
 
 import "./IndividualCountry.css";
 
-const IndividualCountry = (props) => {
+const IndividualCountry = ({ theme }) => {
   const [country, setCountry] = useState([]);
 
   // We can use the `useParams` hook here to access
@@ -25,7 +25,7 @@ const IndividualCountry = (props) => {
         <Loader />
       ) : (
         <div className="country--details">
-          <IndividualCountryDetails country={country} />
+          <IndividualCountryDetails country={country} theme={theme} />
         </div>
       )}
     </div>

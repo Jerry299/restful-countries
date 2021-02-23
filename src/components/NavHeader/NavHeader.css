@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
+    transition: all 0.25s linear;
   }
 
   .header__wrapper-Dark {
@@ -22,6 +23,7 @@
     justify-content: space-between;
     padding: 1.5rem;
     color: #fff;
+    transition: all 0.25s linear;
   }
 
   .header--text {
@@ -53,6 +55,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
+    transition: all 0.25s linear;
   }
   .header__wrapper-Dark {
     background-color: #1e212d;
@@ -62,6 +65,7 @@
     justify-content: space-between;
     padding: 1.5rem;
     color: #fff;
+    transition: all 0.25s linear;
   }
 
   .header--text {
@@ -94,6 +98,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
+    transition: all 0.25s linear;
   }
   .header__wrapper-Dark {
     background-color: #353536;
@@ -103,6 +108,7 @@
     justify-content: space-between;
     padding: 1.5rem;
     color: #fff;
+    transition: all 0.25s linear;
   }
   .header--text {
     font-size: 1.55rem;
@@ -112,6 +118,7 @@
   }
   .header__mode--toggler {
     width: 15%;
+    cursor: pointer;
   }
 
   .header--moon-icon--text {

@@ -3,6 +3,7 @@ import DropDown from "../DropDown/DropDown";
 import SearchBox from "../SearchBox/SearchBox";
 import Countries from "../Countries/Countries";
 import Loader from "../Loader/Loader";
+
 import "./AllCountries.css";
 
 const AllCountries = ({
@@ -24,6 +25,7 @@ const AllCountries = ({
     <main className="countries--container">
       <div className={`countries--wrapper-${theme}`}>
         <div className="search--and--filter">
+          {/* <Dropdown2 /> */}
           <div className="search">
             <SearchBox
               // pass handleSearchText as prop to searchbox
@@ -47,7 +49,7 @@ const AllCountries = ({
               <Loader />
             </div>
           ) : (
-            <Countries countries={filteredByContinent} />
+            <Countries countries={filteredByContinent} theme={theme} />
           )}
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Country from "./Country";
 import "./Countries.css";
 
-const Countries = ({ countries }) => {
+const Countries = ({ countries, theme }) => {
   return (
     <div className="countries-container">
       <div className="countries-wrapper">
@@ -15,6 +15,7 @@ const Countries = ({ countries }) => {
               region={country.region}
               capital={country.capital}
               flag={country.flag}
+              theme={theme}
             />
           );
         })}

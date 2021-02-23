@@ -2,18 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Countries.css";
 
-const Country = ({ name, population, region, capital, flag }) => {
+const Country = ({ name, population, region, capital, flag, theme }) => {
   const number = Number(population);
   const formattedPopulation = new Intl.NumberFormat().format(number);
+
   return (
-    <div className="country--container">
+    <div className={`country--container-${theme}`}>
       <div className="country--card">
         <div className="img--container">
           <img src={flag} alt="" className="img" />
         </div>
         <div className="country--body">
           <Link to={`/countries/${name}`}>
-            <div className="country--name">{name}</div>
+            <div className={`country--name-${theme}`}>{name}</div>
           </Link>
 
           <div className="country--population">

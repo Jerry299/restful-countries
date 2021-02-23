@@ -1,35 +1,152 @@
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-}
-@media screen and (min-device-width: 1200px) and (max-device-width: 3900px) {
-  .details--container {
+  .details--container-Light {
     width: 100%;
     background-color: #f6f6f6;
     font-family: "Cabin", sans-serif;
+    transition: all 0.25s linear;
+    height: calc(100% - 85px);
   }
-  .details--wrapper {
-    display: flex;
+  .details--container-Dark {
+    width: 100%;
+    background-color: #1e212d;
+    color: #fff;
+    font-family: "Cabin", sans-serif;
+    transition: all 0.25s linear;
+    height: calc(100% - 85px);
   }
+
   .back__button {
-    padding: 3.5rem 0px 0px 4rem;
-    margin-left: 1.2rem;
+    padding: 2.5rem 0px 4rem 2rem;
+
     width: 170px;
+    cursor: pointer;
   }
-  .btn {
+
+  .btn-Light {
     background-color: #fff;
     width: 130px;
     text-align: center;
     height: 40px;
     padding: 7px 5px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.25s linear;
+  }
+  .btn-Dark {
+    background-color: #393e46;
+    color: #fff;
+    width: 130px;
+    text-align: center;
+    height: 40px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.25s linear;
+  }
+
+  .details--body {
+    display: flex;
+    flex-direction: column;
+  }
+  .details--flag {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details--flag--img {
+    width: 320px;
+    height: auto;
+  }
+  .details--info {
+    padding: 2rem;
+  }
+  .item--name {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .country--borders--section {
+    padding: 1.2rem 0px;
+  }
+  #country--border {
+    margin: 0.3rem;
+    margin-top: 2rem;
+  }
+  #country--desc {
+    padding-bottom: 2rem;
+  }
+  .country--border-Light {
+    border: 2px solid rgba(81, 85, 104, 0.2);
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .country--border-Dark {
+    /* margin: 0.3rem;
+    margin-top: 2rem; */
+    border: 2px solid rgba(81, 85, 104, 0.2);
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: #393e46;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 2700px) {
+  .details--container-Light {
+    width: 100%;
+    background-color: #f6f6f6;
+    font-family: "Cabin", sans-serif;
+    transition: all 0.25s linear;
+    height: calc(100% - 85px);
+  }
+  .details--container-Dark {
+    width: 100%;
+    background-color: #1e212d;
+    color: #fff;
+    font-family: "Cabin", sans-serif;
+    transition: all 0.25s linear;
+    height: calc(100% - 85px);
+  }
+  .details--wrapper {
+    display: flex;
+  }
+  .back__button {
+    padding: 2.5rem 0px 0px 4rem;
+    margin-left: 1.2rem;
+    width: 170px;
+    cursor: pointer;
+  }
+  .btn-Light {
+    background-color: #fff;
+    width: 130px;
+    text-align: center;
+    height: 40px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.25s linear;
+  }
+  .btn-Dark {
+    background-color: #393e46;
+    color: #fff;
+    width: 130px;
+    text-align: center;
+    height: 40px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.25s linear;
   }
   .details--body {
     display: flex;
   }
   .details--flag {
     margin-left: 1.2rem;
-    padding: 4rem;
+    padding: 3rem;
   }
   .details--flag--img {
     width: 650px;
@@ -50,10 +167,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  .details--info--child--one {
-    /* margin: 1.7rem; */
-    /* background-color: red; */
-  }
+
   .details--info--child--two {
     /* background-color: blue; */
     padding-bottom: 1.3rem;
@@ -65,12 +179,21 @@
   .country--borders--section {
     padding: 1.2rem 0px;
   }
-  .country--border {
+  .country--border-Light {
     margin: 0.3rem;
     border: 2px solid rgba(81, 85, 104, 0.2);
     padding: 7px 25px;
     border-radius: 5px;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .country--border-Dark {
+    margin: 0.3rem;
+    border: 2px solid rgba(81, 85, 104, 0.2);
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: #393e46;
+    color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }

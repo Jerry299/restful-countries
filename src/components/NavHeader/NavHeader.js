@@ -4,12 +4,12 @@ import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faMoon as solidfaMoon } from "@fortawesome/free-solid-svg-icons";
 import "./NavHeader.css";
 
-const NavHeader = ({ theme }) => {
+const NavHeader = ({ theme, handlePageTheme }) => {
   return (
     <header className="header__container">
       <div className={`header__wrapper-${theme}`}>
         <div className="header--text">Where In The World?</div>
-        <div className="header__mode--toggler">
+        <div className="header__mode--toggler" onClick={handlePageTheme}>
           <div>
             {theme === "Light" ? (
               <span>

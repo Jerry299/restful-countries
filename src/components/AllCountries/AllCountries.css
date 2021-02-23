@@ -7,10 +7,12 @@
   .countries--wrapper-Light {
     width: 100%;
     background-color: #f6f6f6;
+    transition: all 0.25s linear;
   }
   .countries--wrapper-Dark {
     width: 100%;
     background-color: #1e212d;
+    transition: all 0.25s linear;
   }
   .search--and--filter {
     display: flex;
@@ -44,10 +46,12 @@
   .countries--wrapper-Light {
     width: 100%;
     background-color: #f6f6f6;
+    transition: all 0.25s linear;
   }
   .countries--wrapper-Dark {
     width: 100%;
     background-color: #1e212d;
+    transition: all 0.25s linear;
   }
   .search--and--filter {
     display: flex;
@@ -60,7 +64,8 @@
     padding-left: 2.69rem;
   }
   .filter {
-    flex: 0.55;
+    flex: 0.95;
+    padding-right: 2rem;
   }
 
   .loading__spinner {

@@ -10,7 +10,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [selectValue, setSelectValue] = useState("All");
   const [countries, setCountries] = useState([]);
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const color = theme ? "Light" : "Dark";
 
   // event handlers
@@ -22,6 +22,9 @@ function App() {
     setSelectValue(e.target.value);
   };
 
+  const handlePageTheme = () => {
+    setTheme(!theme);
+  };
   // effects
   useEffect(() => {
     // fetch function
@@ -42,7 +45,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <NavHeader theme={color} />
+        <NavHeader theme={color} handlePageTheme={handlePageTheme} />
       </div>
 
       <Switch>
@@ -57,7 +60,7 @@ function App() {
           />
         </Route>
         <Route exact path="/countries/:name">
-          <IndividualCountry />
+          <IndividualCountry theme={color} />
         </Route>
       </Switch>
     </Router>

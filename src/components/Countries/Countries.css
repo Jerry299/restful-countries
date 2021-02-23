@@ -22,14 +22,27 @@
   }
 
   /* styles for country component */
-  .country--container {
+  .country--container-Light {
     width: 290px;
     height: 390px;
     background-color: #fff;
     margin: 1.6rem 10px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.25s linear;
   }
+
+  .country--container-Dark {
+    width: 290px;
+    height: 390px;
+    background-color: #222831;
+    color: #fff;
+    margin: 1.6rem 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 3.6px;
+    transition: all 0.25s linear;
+  }
+
   .img--container {
     width: 100%;
     height: 200px;
@@ -37,10 +50,18 @@
   .country--body {
     padding: 2rem 1.4rem 1.2rem;
   }
-  .country--name {
+  .country--name-Light {
     font-size: 1.29rem;
     font-weight: 700;
     margin-bottom: 15px;
+    color: black;
+  }
+
+  .country--name-Dark {
+    font-size: 1.29rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
   }
   .country--span {
     font-size: 1.1rem;
@@ -69,20 +90,48 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   a {
-    color: black;
     text-decoration: none;
   }
 
-  /* styles for country component */
-  .country--container {
+  /* styles for country component for light and Dark mode*/
+  .country--name-Dark {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.29rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: all 0.25s linear;
+  }
+  .country--name-Light {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.29rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: all 0.25s linear;
+  }
+
+  .country--container-Light {
     width: 290px;
     height: 390px;
     background-color: #fff;
-    margin: 1.4rem;
+    margin: 1.3rem;
     flex: 1 0 20%;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
+
+  .country--container-Dark {
+    /* width: 290px; */
+    height: 390px;
+    background-color: #0f1123;
+    color: #fff;
+    margin: 1.5rem;
+    flex: 1 0 20%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
   .img--container {
     width: 100%;
     height: 200px;
@@ -90,19 +139,15 @@
   .img {
     width: 100%;
     max-width: 100%;
-    height: 200px;
+    height: auto;
     border-radius: 5px 5px 0 0;
   }
   .country--body {
     padding: 2rem 1.4rem 1.2rem;
   }
-  .country--name {
-    font-size: 1.29rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
+
   .country--span {
-    font-size: 1.1rem;
+    font-size: 1.07rem;
     font-weight: lighter;
   }
   .country--desc {
