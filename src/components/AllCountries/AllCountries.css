@@ -36,6 +36,42 @@
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .countries--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .countries--wrapper-Light {
+    width: 100%;
+    background-color: #f6f6f6;
+    transition: all 0.25s linear;
+  }
+  .countries--wrapper-Dark {
+    width: 100%;
+    background-color: #1e212d;
+    transition: all 0.25s linear;
+  }
+  .search--and--filter {
+    display: flex;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+  .search {
+    flex: 49.56%;
+    padding-left: 2.69rem;
+  }
+  .filter {
+    flex: 0.95;
+    padding-right: 2rem;
+  }
+
+  .loading__spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 3900px) {
   .countries--container {

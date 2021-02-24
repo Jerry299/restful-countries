@@ -97,10 +97,10 @@ const IndividualCountryDetails = ({ country, theme }) => {
             <div className="country--borders details--info--child--one">
               <section className="country--borders--section">
                 <span className="country--desc" id="country--desc">
-                  Border Countries
+                  Border Countries :{" "}
                 </span>
-                :{" "}
-                {borders.slice(3).map((border) => {
+
+                {borders.slice(0, 3).map((border) => {
                   return (
                     <span
                       key={border}
